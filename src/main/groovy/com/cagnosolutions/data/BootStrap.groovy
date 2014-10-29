@@ -19,5 +19,6 @@ class BootStrap {
         httpServer.listen(8585)
     }
     def destroy = {
+        // something goes in here
     }
 }
