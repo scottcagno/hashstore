@@ -1,0 +1,29 @@
+buildscript {
+    ext {
+        vertxVersion = "2.1.1"
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: "idea"
+apply plugin: "groovy"
+
+jar {
+    baseName = "hashstore"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "io.vertx:vertx-core:${vertxVersion}"
+    compile "io.vertx:vertx-platform:${vertxVersion}"
+    compile "io.vertx:lang-groovy:${vertxVersion}"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
